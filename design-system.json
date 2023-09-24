@@ -1,0 +1,10 @@
+{
+  "prefix": "ds",
+  "colors": {
+    "brand": ["primary", "secondary"],
+    "neutral": ["black", "white", "gray"],
+    "semantic": ["success", "warning", "info", "alert"]
+  },
+  "font": ["Arial", "Helvetica"],
+  "icon-set": "fontawesome"
+}
