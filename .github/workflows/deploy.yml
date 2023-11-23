@@ -25,4 +25,4 @@ jobs:
         with:
           folder: dist
           clean: true
-          target-folder: dist
+          target-folder: docs
