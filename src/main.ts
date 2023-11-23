@@ -1,91 +1,41 @@
+import "./reset.css";
+import "@jkimmeyer/panorama-design-system/styles";
+import "./styles.css";
+import imgUrl from "./assets/panorama-design-system.png";
+import greyscaleImgUrl from "./assets/greyscale-image.png";
+import "@jkimmeyer/panorama-design-system";
+
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 <div class="page">
-  <header class="page-header">
-    <h1>LOGO</h1>
-    <nav class="page-navigation">
-    <ul>
-      <li><a href="#">Overview</a></li>
-      <li><a href="#">Details</a></li>
-      <li><a href="#">Highlights</a></li>
-      <li><a href="#">Sign Up</a></li>
-      <li><a href="#">Log In</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="page-main">
-    <img src="https://placehold.co/1920x400" style="width: 100%;"/>
-    <section>
-      <form>
-        <div class="form-input">
-          <label for="#input">E-Mail</label>
-          <input id="input" type="email">
-        </div>
+  <div class="placeholder-image">
+    <img class="image" src="${greyscaleImgUrl}">
+  </div>
 
-        <fieldset>
-          <legend>Interval</legend>
-          <div class="form-radio">
-            <input id="newsletter-interval-daily" type="radio" name="newsletter-interval" value="daily">
-            <label for="newsletter-interval-daily">Daily</label>
-          </div>
-          <div class="form-radio">
-            <input id="newsletter-interval-weekly" type="radio" name="newsletter-interval" value="weekly">
-            <label for="newsletter-interval-weekly">Weekly</label>
-          </div>
-          <div class="form-radio">
-            <input id="newsletter-interval-monthly" type="radio" name="newsletter-interval" value="monthly">
-            <label for="newsletter-interval-monthly">Monthly</label>
-          </div>
-        </fieldset>
+  <div class="login-form">
 
-        <div class="form-checkbox">
-          <input id="newsletter-terms" type="checkbox" name="newsletter-terms">
-          <label for="newsletter-terms">I accept the terms and conditions</label>
-        </div>
+    <div class="headings">
+      <img class="brand-image" src="${imgUrl}">
+      <h1>Welcome Back!</h1>
+      <h2>Please enter your details</h2>
+    </div>
 
-        <button>
-          Register
-        </button>
-        <button>
-          Submit
-        </button>
-      </form>
+    <pano-input label="Email" input-type="email" size="medium"></pano-input>
+    <pano-input label="Passwort" input-type="password" size="medium"></pano-input>
 
-      <div class="card">
-        <a href="#">
-          <img src="https://placehold.co/400x300" />
-        </a>
+    <div class="repel">
+      <pano-checkbox label="Remember me"></pano-checkbox>
+      <a href="#">Forgot Password?</a>
+    </div>
 
-        <h2 class="card-title"><strong>Card Text</strong> Brand Information</h2>
+    <div class="buttons">
+      <pano-button label="Log In" appearance="filled" theme="primary" size="large"></pano-button>
+      <pano-button label="Log In with Google" appearance="filled" theme="primary" size="large"></pano-button>
+    </div>
 
-        <div class="card-subtitle">19,99 €</div>
-
-        <p>Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet. </p>
-      </div>
-
-      <div class="card">
-        <a href="#">
-          <img src="https://placehold.co/400x300" />
-        </a>
-
-        <h2 class="card-title"><strong>Card Text</strong> Brand Information</h2>
-
-        <div class="card-subtitle">19,99 €</div>
-
-        <p>Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet. </p>
-      </div>
-
-      <div class="card">
-        <a href="#">
-          <img src="https://placehold.co/400x300" />
-        </a>
-
-        <h2 class="card-title"><strong>Card Text</strong> Brand Information</h2>
-
-        <div class="card-subtitle">19,99 €</div>
-
-        <p>Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet. </p>
-      </div>
-    </section>
-  </main>
+    <div class="link">
+      Don't have an account?
+      <a href="#"><strong>Sign up!<strong></a>
+    </div>
+  </div>
 </div>
 `;
