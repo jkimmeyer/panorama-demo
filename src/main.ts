@@ -16,13 +16,13 @@ const setThemeA = () => {
     </div>
 
     <div class="placeholder-image">
-      <img class="image" src="${teaserImgUrlB}">
+      <img class="image" src="${teaserImgUrlA}">
     </div>
 
     <div class="login-form">
 
       <div class="headings">
-        <img class="brand-image" src="${logoUrlB}">
+        <img class="brand-image" src="${logoUrlA}">
         <h1>Welcome Back!</h1>
         <h2>Please enter your details</h2>
       </div>
@@ -36,8 +36,8 @@ const setThemeA = () => {
       </div>
 
       <div class="buttons">
-        <pano-a-button label="Log In" appearance="filled" theme="primary" size="large"></pano-a-button>
-        <pano-a-button label="Log In with Google" appearance="filled" theme="secondary" size="large"></pano-a-button>
+        <pano-a-button full-width label="Log In" appearance="filled" theme="primary" size="large"></pano-a-button>
+        <pano-a-button full-width label="Log In with Google" appearance="filled" theme="secondary" size="large"></pano-a-button>
       </div>
 
       <div class="link">
@@ -55,19 +55,19 @@ const setThemeA = () => {
 
 const setThemeB = () => {
   document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-<div class="page" data-theme-a>
+<div class="page" data-theme-b>
   <div class="page-container">
     <pano-b-button id="theme-switcher" label="Switch to Example A" appearance="filled" theme="primary" size="medium"></pano-b-button>
   </div>
 
   <div class="placeholder-image">
-    <img class="image" src="${teaserImgUrlA}">
+    <img class="image" src="${teaserImgUrlB}">
   </div>
 
   <div class="login-form">
 
     <div class="headings">
-      <img class="brand-image" src="${logoUrlA}">
+      <img class="brand-image" src="${logoUrlB}">
       <h1>Welcome Back!</h1>
       <h2>Please enter your details</h2>
     </div>
@@ -81,8 +81,8 @@ const setThemeB = () => {
     </div>
 
     <div class="buttons">
-      <pano-b-button label="Log In" appearance="filled" theme="primary" size="large"></pano-b-button>
-      <pano-b-button label="Log In with Google" appearance="outline" theme="primary" size="large"></pano-b-button>
+      <pano-b-button full-width label="Log In" appearance="filled" theme="primary" size="large"></pano-b-button>
+      <pano-b-button full-width label="Log In with Google" appearance="outline" theme="primary" size="large"></pano-b-button>
     </div>
 
     <div class="link">

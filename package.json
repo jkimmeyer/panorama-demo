@@ -13,6 +13,6 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "@jkimmeyer/panorama-design-system": "^0.0.14"
+    "@jkimmeyer/panorama-design-system": "^0.0.16"
   }
 }
