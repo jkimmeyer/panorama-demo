@@ -8,6 +8,20 @@ import logoUrlB from "./assets/logo-b.png";
 import teaserImgUrlB from "./assets/teaser-image-b.png";
 import "@jkimmeyer/panorama-design-system";
 
+function escapeHtml(unsafe) {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+const radioOptions = JSON.stringify([
+  { login: "Log In" },
+  { signUp: "Sign Up" },
+]);
+
 const setThemeA = () => {
   document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div class="page" data-theme-a>
@@ -26,6 +40,10 @@ const setThemeA = () => {
         <h1>Welcome Back!</h1>
         <h2>Please enter your details</h2>
       </div>
+
+      <pano-a-radio-group class="radio-group" name="radio-a" label="Account Method" hiddenlabel options="${escapeHtml(
+        radioOptions
+      )}"></pano-a-radio-group>
 
       <pano-a-input label="Email" input-type="email" size="medium"></pano-a-input>
       <pano-a-input label="Passwort" input-type="password" size="medium"></pano-a-input>
@@ -71,6 +89,10 @@ const setThemeB = () => {
       <h1>Welcome Back!</h1>
       <h2>Please enter your details</h2>
     </div>
+
+    <pano-b-radio-group class="radio-group" name="radio-b" label="Account Method" hiddenlabel options="${escapeHtml(
+      radioOptions
+    )}"></pano-b-radio-group>
 
     <pano-b-input label="Email" input-type="email" size="medium"></pano-b-input>
     <pano-b-input label="Passwort" input-type="password" size="medium"></pano-b-input>

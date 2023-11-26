@@ -34,6 +34,12 @@ a:active {
   color: var(--color-primary);
 }
 
+[data-theme-a] a:focus,
+[data-theme-a] a:hover,
+[data-theme-a] a:active {
+  color: var(--color-secondary-container);
+}
+
 .placeholder-image {
   grid-column: 1 / 8;
 }
@@ -83,4 +89,8 @@ a:active {
   flex-direction: column;
   margin-inline: 20%;
   gap: var(--space-4);
+}
+
+.radio-group {
+  margin-inline: auto;
 }
