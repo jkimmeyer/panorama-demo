@@ -1,35 +1,88 @@
 import "./reset.css";
 import "@jkimmeyer/panorama-design-system/styles";
 import "./styles.css";
-import imgUrl from "./assets/panorama-design-system.png";
-import greyscaleImgUrl from "./assets/greyscale-image.png";
+import logoUrlA from "./assets/logo-a.png";
+import teaserImgUrlA from "./assets/teaser-image-a.png";
+
+import logoUrlB from "./assets/logo-b.png";
+import teaserImgUrlB from "./assets/teaser-image-b.png";
 import "@jkimmeyer/panorama-design-system";
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-<div class="page">
+const setThemeA = () => {
+  document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+  <div class="page" data-theme-a>
+    <div class="page-container">
+      <pano-a-button id="theme-switcher" label="Switch to Example B" appearance="filled" theme="secondary" size="medium"></pano-a-button>
+    </div>
+
+    <div class="placeholder-image">
+      <img class="image" src="${teaserImgUrlB}">
+    </div>
+
+    <div class="login-form">
+
+      <div class="headings">
+        <img class="brand-image" src="${logoUrlB}">
+        <h1>Welcome Back!</h1>
+        <h2>Please enter your details</h2>
+      </div>
+
+      <pano-a-input label="Email" input-type="email" size="medium"></pano-a-input>
+      <pano-a-input label="Passwort" input-type="password" size="medium"></pano-a-input>
+
+      <div class="repel">
+        <pano-a-checkbox label="Remember me"></pano-a-checkbox>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <div class="buttons">
+        <pano-a-button label="Log In" appearance="filled" theme="primary" size="large"></pano-a-button>
+        <pano-a-button label="Log In with Google" appearance="filled" theme="secondary" size="large"></pano-a-button>
+      </div>
+
+      <div class="link">
+        Don't have an account?
+        <a href="#"><strong>Sign up!<strong></a>
+      </div>
+    </div>
+  </div>
+  `;
+
+  const themeSwitcher =
+    document.querySelector<HTMLButtonElement>("#theme-switcher");
+  themeSwitcher!.addEventListener("click", setThemeB);
+};
+
+const setThemeB = () => {
+  document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+<div class="page" data-theme-a>
+  <div class="page-container">
+    <pano-b-button id="theme-switcher" label="Switch to Example A" appearance="filled" theme="primary" size="medium"></pano-b-button>
+  </div>
+
   <div class="placeholder-image">
-    <img class="image" src="${greyscaleImgUrl}">
+    <img class="image" src="${teaserImgUrlA}">
   </div>
 
   <div class="login-form">
 
     <div class="headings">
-      <img class="brand-image" src="${imgUrl}">
+      <img class="brand-image" src="${logoUrlA}">
       <h1>Welcome Back!</h1>
       <h2>Please enter your details</h2>
     </div>
 
-    <pano-input label="Email" input-type="email" size="medium"></pano-input>
-    <pano-input label="Passwort" input-type="password" size="medium"></pano-input>
+    <pano-b-input label="Email" input-type="email" size="medium"></pano-b-input>
+    <pano-b-input label="Passwort" input-type="password" size="medium"></pano-b-input>
 
     <div class="repel">
-      <pano-checkbox label="Remember me"></pano-checkbox>
+      <pano-b-checkbox label="Remember me"></pano-b-checkbox>
       <a href="#">Forgot Password?</a>
     </div>
 
     <div class="buttons">
-      <pano-button label="Log In" appearance="filled" theme="primary" size="large"></pano-button>
-      <pano-button label="Log In with Google" appearance="filled" theme="primary" size="large"></pano-button>
+      <pano-b-button label="Log In" appearance="filled" theme="primary" size="large"></pano-b-button>
+      <pano-b-button label="Log In with Google" appearance="outline" theme="primary" size="large"></pano-b-button>
     </div>
 
     <div class="link">
@@ -39,3 +92,10 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   </div>
 </div>
 `;
+
+  const themeSwitcher =
+    document.querySelector<HTMLButtonElement>("#theme-switcher");
+  themeSwitcher!.addEventListener("click", setThemeA);
+};
+
+setThemeA();

@@ -1,15 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .page {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   height: 100vh;
+  font-family: var(--ds-default-font);
   gap: var(--space-8);
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background-color: var(--pano-gray-2);
 }
 
 a {
   text-decoration: none;
   font-family: var(--ds-default-font);
   color: var(--color-font)
+}
+
+a:focus,
+a:hover,
+a:active {
+  color: var(--color-primary);
 }
 
 .placeholder-image {
@@ -49,6 +71,7 @@ a {
 
 .brand-image {
   width: 200px;
+  margin-bottom: var(--space-32);
 }
 
 .link {
