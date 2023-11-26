@@ -18,6 +18,7 @@ jobs:
           persist-credentials: false
       - name: Install and Build 🔧
         run: | # Install npm packages and build the Storybook files
+          rm .npmrc
           npm ci
           npm run build
       - name: Deploy 🚀
