@@ -7,10 +7,25 @@
 }
 
 .page {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   height: 100vh;
   gap: var(--space-8);
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background-color: lightgrey;
 }
 
 a {
