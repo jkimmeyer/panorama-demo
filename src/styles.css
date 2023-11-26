@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   height: 100vh;
+  font-family: var(--ds-default-font);
   gap: var(--space-8);
 }
 
@@ -18,13 +19,19 @@
   left: 0;
   right: 0;
   height: 48px;
-  background-color: lightgrey;
+  background-color: var(--pano-gray-2);
 }
 
 a {
   text-decoration: none;
   font-family: var(--ds-default-font);
   color: var(--color-font)
+}
+
+a:focus,
+a:hover,
+a:active {
+  color: var(--color-primary);
 }
 
 .placeholder-image {
@@ -64,6 +71,7 @@ a {
 
 .brand-image {
   width: 200px;
+  margin-bottom: var(--space-32);
 }
 
 .link {
