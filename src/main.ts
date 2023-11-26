@@ -8,7 +8,7 @@ import logoUrlB from "./assets/logo-b.png";
 import teaserImgUrlB from "./assets/teaser-image-b.png";
 import "@jkimmeyer/panorama-design-system";
 
-function escapeHtml(unsafe) {
+function escapeHtml(unsafe: string) {
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
