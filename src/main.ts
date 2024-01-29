@@ -181,10 +181,6 @@ const setHsdDesignSystem = () => {
       <h2>Please enter your details</h2>
     </div>
 
-    <hsd-radio-group class="radio-group" name="radio-b" label="Account Method" hiddenlabel options="${escapeHtml(
-      radioOptions
-    )}"></hsd-radio-group>
-
     <hsd-input label="Email" input-type="email" size="medium"></hsd-input>
     <hsd-input label="Passwort" input-type="password" size="medium"></hsd-input>
 
@@ -231,10 +227,6 @@ const setZweitagDesignSystem = () => {
       <h2>Please enter your details</h2>
     </div>
 
-    <zw-radio-group class="radio-group" name="radio-b" label="Account Method" hiddenlabel options="${escapeHtml(
-      radioOptions
-    )}"></zw-radio-group>
-
     <zw-input label="Email" input-type="email" size="medium"></zw-input>
     <zw-input label="Passwort" input-type="password" size="medium"></zw-input>
 
@@ -280,10 +272,6 @@ const setIkeaDesignSystem = () => {
       <h1>Welcome Back!</h1>
       <h2>Please enter your details</h2>
     </div>
-
-    <ikea-radio-group class="radio-group" name="radio-b" label="Account Method" hiddenlabel options="${escapeHtml(
-      radioOptions
-    )}"></ikea-radio-group>
 
     <ikea-input label="Email" input-type="email" size="medium"></ikea-input>
     <ikea-input label="Passwort" input-type="password" size="medium"></ikea-input>
