@@ -2852,7 +2852,7 @@
 
     <div class="buttons">
       <hsd-button full-width label="Log In" appearance="filled" theme="primary" size="large"></hsd-button>
-      <hsd-button full-width label="Log In with Google" appearance="text" theme="primary" size="large"></hsd-button>
+      <hsd-button full-width label="Log In with Google" appearance="outline" theme="primary" size="large"></hsd-button>
     </div>
 
     <div class="link">
@@ -2892,8 +2892,8 @@
     </div>
 
     <div class="buttons">
-      <zw-button full-width label="Log In" appearance="filled" theme="primary" size="large"></zw-button>
-      <zw-button full-width label="Log In with Google" appearance="outline" theme="primary" size="large"></zw-button>
+      <zw-button full-width label="Log In" appearance="filled" theme="highlight" size="large"></zw-button>
+      <zw-button full-width label="Log In with Google" appearance="filled" theme="primary" size="large"></zw-button>
     </div>
 
     <div class="link">
@@ -2933,7 +2933,7 @@
     </div>
 
     <div class="buttons">
-      <ikea-button full-width label="Log In" appearance="filled" theme="highlight" size="large"></ikea-button>
+      <ikea-button full-width label="Log In" appearance="outline" theme="primary" size="large"></ikea-button>
       <ikea-button full-width label="Log In with Google" appearance="filled" theme="primary" size="large"></ikea-button>
     </div>
 
